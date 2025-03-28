@@ -1,0 +1,42 @@
+
+body { 
+  font-family: Arial, sans-serif; 
+  text-align: center; 
+}
+
+.board { 
+  display: grid; 
+  grid-template-columns: repeat(10, 30px); 
+  gap: 2px; 
+  justify-content: center; 
+}
+
+.cell {
+  width: 30px; 
+  height: 30px; 
+  border: 1px solid #999;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  font-size: 16px; 
+  cursor: pointer; 
+  background: lightgray;
+}
+
+.cell.revealed { 
+  background: #7d9de2; 
+  cursor: default; 
+}
+
+.cell.mine { 
+  background: lightgray; 
+}
+
+.flag { 
+  color: red; 
+  font-weight: bold; 
+}
+
+.cell:not(.revealed):hover { 
+  background: #bbb; 
+}
